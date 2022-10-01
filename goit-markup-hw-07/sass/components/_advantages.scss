@@ -1,0 +1,48 @@
+.advantages__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 30px;
+
+    &--bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        height: 120px;
+        background: $advIconBgColor;
+        border-radius: $cardBorderRadius;
+    }
+
+    &--icon {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.advantages__textbox {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+
+    &--title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    &--desc {
+        font-size: 14px;
+        line-height: 1.71;
+        /* or 171% */
+        letter-spacing: 0.03em;
+        color: #757575;
+        margin-top: 10px;
+    }
+}
+
+
+

@@ -1,0 +1,198 @@
+
+
+.menu-mobile {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    padding-right: 83px;
+
+    &__nav {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            &--item {
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 1.176;
+                letter-spacing: 0.02em;
+                text-decoration: none;
+                color: $primaryColor;
+                display: flex;
+                align-items: center;
+                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                &:hover , &:focus {
+                    color: $brandColor
+                }  
+            }
+            
+            &--active {
+                color: $brandColor
+                }
+        }
+
+    &__cont {
+        padding-top: 302px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        &--mail {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.67;
+            letter-spacing: 0.02em;
+            color: $secondaryColor;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover, &:focus {
+                color: $brandColor
+            }
+        }
+
+        &--phone {
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 1.17;
+            letter-spacing: 0.02em;
+            color: $brandColor;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover, &:focus {
+                color: $brandColor
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-top: 64px;
+
+        &--item {
+            padding-left: 10px;
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+            &:last-child {
+                border-right: none;
+            }
+            
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+
+        &--link {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.22;
+            letter-spacing: 0.02em;
+            color: $brandColor;
+           
+            &:hover, &:focus {
+                color: $brandColor
+            }
+        }
+    }
+
+}
+
+
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        color: $brandColor;
+    }
+
+}
+
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: white;
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    &.is-open {
+            transform: translateX(0);
+        }
+
+    & .menu-toggle {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        color: $primaryColor;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    & .menu-toggle:hover,
+    & .menu-toggle:focus {
+        color: $brandColor;
+    }
+}
+
+
+.mobile-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    & .menu-mobile--nav,
+    & .menu-mobile--phone,
+    & .menu-mobile--mail {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+     }
+}
+
+
+@media (max-width: 767px) {
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu__contact,
+    .menu__nav {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+ @media (min-width: 768px) {
+    .menu-mobile .menu-mobile__nav--itemv .menu-mobile__cont--phone .menu-mobile__cont--mail {
+        display: none;
+    }
+} 

@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    width: 1600px;
+    font-family: "Roboto", "Raleway", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: $secondaryColor;
+    box-shadow: 3px 3px 5px rgb(136, 136, 136);
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.section {
+    padding: 94px 0;
+    &--top {padding: 94px 0 0 0;}
+    &--bottom {padding: 0 0 94px 0}
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* hiding elements while maintaining their functions */
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+

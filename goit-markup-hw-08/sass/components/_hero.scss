@@ -1,0 +1,110 @@
+
+
+.hero {
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+
+    &-background {
+        background: $bannerBgColor;
+        background-image: url(../images/mobile/hero-bg-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        box-shadow: inset 50px 50px 50px 50px rgba(47, 48, 58, 0.4),
+            inset 1600px 600px 50px 50px rgba(47, 48, 58, 0.4);
+        }
+
+    &__title {
+        font-size: 26px;
+        color: white;
+        font-weight: 900;
+        line-height: 1.61;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    &__button {
+        color:$btnLetterColor;
+        background-color: $brandColor;
+        border-radius: $btnBorderRadius;
+        border: 1px solid $brandColor;
+        margin-top: 40px;
+        padding: 16px 42px;
+        font-weight: $btnFontWeight;
+        font-size: $btnFontSize;
+        letter-spacing: $btnLetterSpacing;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.5);
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+
+    .hero-background {
+        background-image: url(../images/mobile/hero-bg-mobile.jpg);
+        max-height: 400px;
+       
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+
+        .hero-background {
+            background-image: url(../images/mobile/hero-bg-mobile@2x.jpg);
+        }
+    }
+
+    .hero {
+        padding: 118px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .hero-background {
+        background-image: url(../images/tablet/hero-bg-tablet.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+
+        .hero-background {
+            background-image: url(../images/tablet/hero-bg-tablet@2x.jpg)
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .hero__title {
+        font-size: 44px;
+        line-height: 1.36;
+    }
+
+    .hero-background {
+        background-image: url(../images/hero-bg-1600.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+
+        .hero-background {
+            background-image: url(../images/hero-bg-1600@2x.jpg);
+        }
+    }
+}
